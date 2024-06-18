@@ -57,7 +57,7 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 5rem;
+  left: 2.5rem;
   background: rgba(255, 166, 0, 0.267);
 }
 
@@ -66,7 +66,7 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
-  right: 2.5rem;
+  right: 5rem;
   background: rgba(255, 166, 0, 0.267);
   box-shadow: 0 0 4px 1px #2c2c2c;
 }
@@ -75,7 +75,7 @@ body {
   width: 100%;
   height: 1px;
   position: absolute;
-  top: 5rem;
+  top: 2.5rem;
   left: 0;
   background: rgba(255, 166, 0, 0.267);
   box-shadow: 0 0 4px 1px #2c2c2c;
@@ -85,7 +85,7 @@ body {
   width: 100%;
   height: 1px;
   position: fixed;
-  bottom: 2.5rem;
+  bottom: 5rem;
   left: 0;
   background: rgba(255, 166, 0, 0.267);
   box-shadow: 0 0 4px 1px #2c2c2c;
@@ -251,9 +251,8 @@ a:focus-visible {
 
 .frame__title {
   grid-area: title;
-  font-size: clamp(1.5rem, 15vw, 9rem);
+  font-size: clamp(1.5rem, 12vw, 9rem);
   margin: 0;
-  margin-top: 2rem;
   font-weight: 300;
   max-width: 80vw;
   line-height: 1.2;

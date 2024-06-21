@@ -8,7 +8,7 @@ let lenis;
 const grid = document.querySelector(".grid");
 
 // Get all grid items within the grid
-const gridItems = document.querySelectorAll(".grid__item");
+let gridItems = document.querySelectorAll(".grid__item");
 
 // Function to initialize Lenis for smooth scrolling
 const initSmoothScrolling = () => {
@@ -30,12 +30,11 @@ const initSmoothScrolling = () => {
   requestAnimationFrame(scrollFn);
 };
 
-const scroll = () => {
+export function scroll(items) {
   const viewportHeight = window.innerHeight;
   const endValue = viewportHeight / 2;
-
   // Loop through each grid item to add animations
-  gridItems.forEach((item, index) => {
+  items.forEach((item, index) => {
     // Get the previous element sibling for the current item
     const previousElementSibling = item.previousElementSibling;
     // Determine if the current item is on the left side based on its position relative to the previous item
@@ -94,11 +93,11 @@ const scroll = () => {
         0
       );
   });
-};
+}
 
 // Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
 preloadImages(".grid__item-img-inner").then(() => {
   initSmoothScrolling();
-  scroll();
+  scroll(gridItems);
   document.body.classList.remove("loading");
 });

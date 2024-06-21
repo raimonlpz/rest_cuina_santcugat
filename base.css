@@ -405,7 +405,7 @@ span.frame__demos-item:not(:first-child) {
 .outro {
   display: grid;
   place-items: center;
-  margin: 40vh 0;
+  margin: 32vh 0;
 }
 
 .outro__title {
@@ -478,6 +478,30 @@ span.frame__demos-item:not(:first-child) {
   padding: 1rem 2rem;
   border-radius: 10px;
   background-color: #00000017;
+}
+
+.footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer span {
+  opacity: 0.65;
+  font-size: 0.85rem;
+}
+.footer_logo img {
+  width: 30px;
+  margin-right: 0.35rem;
+  opacity: 0.45;
+}
+.footer_logo img:nth-child(2) {
+  width: 33px;
 }
 
 @media screen and (min-width: 53em) {

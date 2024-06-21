@@ -304,10 +304,26 @@ a:focus-visible {
   justify-self: start;
 }
 
+.nav {
+  position: fixed;
+  top: 2rem;
+  right: 10rem;
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 100;
+  /* mix-blend-mode: exclusion; */
+  color: white;
+  font-size: 1.15rem;
+}
+
 .lang {
   position: fixed;
   top: 2rem;
   right: 3rem;
+  z-index: 100;
+  font-size: 1.15rem;
+  mix-blend-mode: exclusion;
 }
 
 .frame__demos {
@@ -404,6 +420,8 @@ span.frame__demos-item:not(:first-child) {
   grid-auto-flow: row;
   grid-template-columns: 250px;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__image {
@@ -428,9 +446,43 @@ span.frame__demos-item:not(:first-child) {
   padding-bottom: 50vh;
 }
 
+.card_address,
+.card_hours,
+.card_legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+.card_legal span {
+  text-decoration: underline;
+}
+
+.card_logo {
+  grid-area: title;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.card_logo span {
+  font-optical-sizing: auto;
+  font-family: "PP Playground", cursive;
+  font-size: clamp(1.5rem, 6vw, 4.5rem);
+}
+
+.card_fork a {
+  border: 1px solid rgba(255, 255, 255, 0.53);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: #00000017;
+}
+
 @media screen and (min-width: 53em) {
   .card-wrap {
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(3, 400px);
   }
 
   .grid {
@@ -443,6 +495,9 @@ span.frame__demos-item:not(:first-child) {
   }
 }
 
+/**
+  BACKGROUND
+*/
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);

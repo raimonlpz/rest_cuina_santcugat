@@ -1026,7 +1026,7 @@ Experience
 .experience h5 {
   font-size: 8rem;
   font-weight: 300;
-  font-family: PP Playground;
+  font-family: "PP Playground", cursive;
 }
 
 /**
@@ -1042,7 +1042,7 @@ Visitans
 .visit h5 {
   font-size: 8rem;
   font-weight: 300;
-  font-family: PP Playground;
+  font-family: "PP Playground", cursive;
 }
 
 .visit .card {
@@ -1087,12 +1087,12 @@ Carta
 .menu h5 {
   font-size: 8rem;
   font-weight: 300;
-  font-family: PP Playground;
+  font-family: "PP Playground", cursive;
 }
 
 .menu__heading {
   font-size: 4rem;
-  font-family: PP Playground;
+  font-family: "PP Playground", cursive;
   font-weight: 300;
 }
 
@@ -1171,5 +1171,5 @@ Gallery
 .gallery h5 {
   font-size: 8rem;
   font-weight: 300;
-  font-family: PP Playground;
+  font-family: "PP Playground", cursive;
 }

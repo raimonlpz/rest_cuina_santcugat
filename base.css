@@ -155,7 +155,7 @@ a:focus-visible {
   /* Draw a very noticeable focus style for
 	 keyboard-focus on browsers that do support
 	 :focus-visible */
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 /**
@@ -163,20 +163,24 @@ TRANSITION PAGE
 **/
 ul.transition {
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   height: 100vh;
-  width: 100%;
+  width: calc(100vw + 50px);
   top: 0;
   left: 0;
   margin: 0;
+  margin-left: -50px;
   pointer-events: none;
+  list-style: none;
+  list-style-type: none;
 }
 
 ul.transition li {
   transform: scaleY(0);
-  background: white;
-  width: 20%;
+  background: rgba(208, 135, 0, 0.753);
+  width: 100%;
+  list-style: none;
 }
 
 /**

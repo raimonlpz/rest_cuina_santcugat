@@ -310,8 +310,8 @@ GRID
 
 .lang {
   position: fixed;
-  top: 3.45rem;
-  right: 3rem;
+  top: 3.65rem;
+  right: 4rem;
   z-index: 100;
   font-size: 1.15rem;
   /* mix-blend-mode: exclusion; */

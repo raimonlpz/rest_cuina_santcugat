@@ -478,6 +478,12 @@ span.frame__demos-item:not(:first-child) {
   background-color: #00000017;
 }
 
+.card_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .footer {
   position: fixed;
   bottom: 1rem;
@@ -953,11 +959,11 @@ Nav Mobile
 
 .item {
   list-style: none;
-  border-bottom: solid 2px currentColor;
+  border-bottom: solid 2px rgba(255, 166, 0, 0.567);
 }
 
 .item:first-child {
-  border-top: solid 2px currentColor;
+  border-top: solid 2px rgba(255, 166, 0, 0.567);
 }
 
 .item a {
@@ -1005,4 +1011,165 @@ Nav Mobile
 
 p {
   font-size: 20px;
+}
+
+/**
+Experience
+*/
+.experience {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.experience h5 {
+  font-size: 8rem;
+  font-weight: 300;
+  font-family: PP Playground;
+}
+
+/**
+Visitans
+*/
+.visit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.visit h5 {
+  font-size: 8rem;
+  font-weight: 300;
+  font-family: PP Playground;
+}
+
+.visit .card {
+  margin-bottom: 8rem;
+}
+
+.visit_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+.gmaps {
+  width: 90vw !important;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .visit_content {
+    flex-direction: row;
+  }
+  .gmaps {
+    width: 500px !important;
+  }
+}
+
+.gmaps {
+  opacity: 0.45rem !important;
+}
+
+/**
+Carta
+*/
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu h5 {
+  font-size: 8rem;
+  font-weight: 300;
+  font-family: PP Playground;
+}
+
+.menu__heading {
+  font-size: 4rem;
+  font-family: PP Playground;
+  font-weight: 300;
+}
+
+/* Menu Block */
+.menu__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Menu Heading */
+.menu__heading {
+  font-weight: bold;
+
+  position: relative;
+  z-index: 1;
+  padding: 0 20px; /* Match the background color */
+}
+
+/* Decorative Lines */
+.menu__block::before,
+.menu__block::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid white;
+  margin: 0 -80px;
+  transform: translateY(-50%); /* Align vertically with the text */
+}
+
+/* Optional: Ensure lines stretch and adjust around text */
+.menu__block {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+
+.menu__block:nth-child(1) {
+  margin-top: 0;
+}
+
+.menu__block::before,
+.menu__block::after {
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 70px); /* Adjust for text width */
+}
+.menu__block::before {
+  left: 0;
+}
+
+.menu__block::after {
+  right: 0;
+}
+
+.menu__dish {
+  font-size: 1rem;
+  font-weight: 200;
+  margin-top: 3.5rem;
+  align-self: center;
+  text-align: center;
+}
+
+/**
+Gallery
+*/
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gallery h5 {
+  font-size: 8rem;
+  font-weight: 300;
+  font-family: PP Playground;
 }

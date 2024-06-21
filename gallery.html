@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuina de Sant Cugat - Galeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&family=Playwrite+ES:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/pdt4wgm.css" />
+    <link rel="stylesheet" href="./base.css" />
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+  </head>
+
+  <body class="demo-1 loading">
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="header" id="hamburger">
+      <input class="hidden" id="drawer-input" type="checkbox" />
+      <label for="drawer-input" class="drawer-open">
+        <span></span>
+      </label>
+
+      <div class="nav">
+        <a class="frame__prev" href="./index.html" id="home">Inici</a>
+        <a class="frame__prev" href="./experience.html" id="experience"
+          >Experiència</a
+        >
+        <a class="frame__back" href="./visit.html" id="visit">Visita'ns</a>
+        <a class="frame__prev" href="./menu.html" id="menu">La Carta</a>
+        <a class="frame__prev" href="./gallery.html" id="gallery">Galeria</a>
+      </div>
+      <a class="lang">ES / CA</a>
+
+      <nav class="nav-content">
+        <ul class="items">
+          <li class="item">
+            <a href="./index.html">
+              <p>001</p>
+              <p>Inici</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="./experience.html">
+              <p>002</p>
+              <p>Experiència</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="./visit.html">
+              <p>003</p>
+              <p>Visita'ns</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="./menu.html">
+              <p>004</p>
+              <p>La Carta</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="./gallery.html">
+              <p>005</p>
+              <p>Galeria</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="lv"></div>
+    <div class="rv"></div>
+    <div class="th"></div>
+    <div class="bh"></div>
+
+    <ul class="transition">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <main data-barba="wrapper">
+      <div data-barba="container"></div>
+    </main>
+
+    <div class="custom-cursor"></div>
+
+    <p class="credits">Photo by <a href="">@calabisou</a></p>
+
+    <section class="outro">
+      <h2 class="outro__title">Cuina de proximitat</h2>
+
+      <div class="card-wrap">
+        <div class="card">
+          <div class="card_address">
+            <span>Carrer Nou, 10, 08395</span>
+            <span>Sant Cugat del Vallès, Barcelona</span>
+          </div>
+          <div class="card_hours">
+            <span>HORARI</span>
+            <span>Miércoles - Domingo</span>
+            <span>13:00 - 15:30</span>
+            <span>Miércoles - Sábado</span>
+            <span>20:00 - 22:30</span>
+          </div>
+          <div class="card_legal">
+            <span>Aviso Legal</span>
+            <span>Política de Privacidad</span>
+            <span>Política de Cookies</span>
+          </div>
+        </div>
+        <div class="card">
+          <h1 class="card_logo">
+            Restaurant <br /><span>Cuina</span> de <span>Sant Cugat</span>
+          </h1>
+        </div>
+        <div class="card">
+          <div class="card_fork">
+            <a href="">RESERVA a The Fork</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <span> ©Cuina de Sant Cugat 2024 </span>
+      <div class="footer_logo">
+        <img src="img/logos/michelin.webp" alt="michelin" />
+        <img src="img/logos/repsol.webp" />
+      </div>
+    </div>
+
+    <script src="js/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/lenis.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="module" src="js/cursor.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/barba.transitions.js"></script>
+  </body>
+</html>

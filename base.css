@@ -178,7 +178,7 @@ ul.transition {
 
 ul.transition li {
   transform: scaleY(0);
-  background: rgba(208, 135, 0, 0.753);
+  background: rgba(125, 81, 0, 0.753);
   width: 100%;
   list-style: none;
 }
@@ -291,25 +291,30 @@ GRID
 }
 
 .nav {
-  position: fixed;
-  top: 2rem;
-  right: 10rem;
-  width: 35vw;
-  display: flex;
-  justify-content: space-evenly;
-  z-index: 100;
-  /* mix-blend-mode: exclusion; */
-  color: white;
-  font-size: 1.15rem;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 3.65rem;
+    right: 10rem;
+    width: 35vw;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 100;
+    /* mix-blend-mode: exclusion; */
+    color: white;
+    font-size: 1.15rem;
+  }
 }
 
 .lang {
   position: fixed;
-  top: 2rem;
+  top: 3.45rem;
   right: 3rem;
   z-index: 100;
   font-size: 1.15rem;
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: exclusion; */
 }
 
 .frame__demos {
@@ -833,4 +838,171 @@ span.frame__demos-item:not(:first-child) {
   animation-delay: -98s;
   transform-origin: 10vw 22vh;
   box-shadow: -100vmin 0 12.911441386567665vmin currentColor;
+}
+
+/**
+Nav Mobile
+*/
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  width: 50px;
+  height: 75px;
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.85rem;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: "";
+  height: 2.5px;
+  width: 25px;
+  background-color: currentColor;
+  transition: 400ms 350ms;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-input:checked ~ .drawer-open span {
+  width: 0px;
+  transition: 100ms;
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-input:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transition: all 400ms 100ms cubic-bezier(0.1, 0, 0.85, 0);
+  transform: rotate(45deg);
+}
+
+#drawer-input:checked ~ .drawer-open span::after {
+  top: 0;
+  transition: all 400ms 100ms cubic-bezier(0.1, 0, 0.85, 0);
+  transform: rotate(-45deg);
+}
+
+#drawer-input:checked ~ .nav-content {
+  transition: all 500ms cubic-bezier(0.1, 0, 0.8, 0);
+  height: calc(100vh - 30px);
+}
+
+#drawer-input:checked ~ .nav-content .items {
+  opacity: 1;
+  transition: 1500ms 600ms;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 75px;
+  width: calc(100 - 60px);
+  margin: 15px 15px 0 30px;
+}
+
+.items {
+  width: 100%;
+  min-width: 300px;
+  margin: 0 15px 0;
+}
+
+.item {
+  list-style: none;
+  border-bottom: solid 2px currentColor;
+}
+
+.item:first-child {
+  border-top: solid 2px currentColor;
+}
+
+.item a {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item a p {
+  transition: 150ms;
+}
+
+.item:hover a p {
+  color: #7fb1c9ff;
+}
+
+.nav-content {
+  position: fixed;
+  height: 75px;
+  width: calc(100vw - 30px);
+  left: 0;
+  top: 0;
+  margin: 15px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px 0 rgba(3, 3, 3, 0.3);
+  min-width: 300px;
+  border-radius: 38px;
+  transition: 400ms 350ms;
+  z-index: -1;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-content .items {
+  opacity: 0;
+  transition: 350ms;
+  margin-top: 75px;
+  padding-inline-start: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+p {
+  font-size: 20px;
 }

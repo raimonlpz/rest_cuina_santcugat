@@ -932,9 +932,13 @@ Nav Mobile
   height: calc(100vh - 30px);
 }
 
+.nav-content .items {
+  pointer-events: none;
+}
 #drawer-input:checked ~ .nav-content .items {
   opacity: 1;
   transition: 1500ms 600ms;
+  pointer-events: all;
 }
 
 .hidden {

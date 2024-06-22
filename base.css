@@ -526,8 +526,34 @@ span.frame__demos-item:not(:first-child) {
 /**
   BACKGROUND
 */
+/* Keyframes with Vendor Prefixes */
+@-webkit-keyframes move {
+  100% {
+    -webkit-transform: translate3d(0, 0, 1px) rotate(360deg);
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+@-moz-keyframes move {
+  100% {
+    -moz-transform: translate3d(0, 0, 1px) rotate(360deg);
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+@-o-keyframes move {
+  100% {
+    -o-transform: translate3d(0, 0, 1px) rotate(360deg);
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
 @keyframes move {
   100% {
+    -webkit-transform: translate3d(0, 0, 1px) rotate(360deg);
+    -moz-transform: translate3d(0, 0, 1px) rotate(360deg);
+    -ms-transform: translate3d(0, 0, 1px) rotate(360deg);
+    -o-transform: translate3d(0, 0, 1px) rotate(360deg);
     transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
@@ -550,10 +576,11 @@ span.frame__demos-item:not(:first-child) {
   border-radius: 50vmin;
   backface-visibility: hidden;
   position: absolute;
-  animation: move;
-  animation-duration: 33;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation: move 33s linear infinite;
+  -moz-animation: move 33s linear infinite;
+  -ms-animation: move 33s linear infinite;
+  -o-animation: move 33s linear infinite;
+  animation: move 33s linear infinite;
   opacity: 0.12;
 }
 

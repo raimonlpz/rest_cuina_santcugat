@@ -567,7 +567,7 @@ span.frame__demos-item:not(:first-child) {
 
 .background {
   position: fixed;
-  width: 100vw;
+  width: 105vw;
   height: 100vh;
   top: 0;
   left: 0;

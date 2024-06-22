@@ -100,6 +100,7 @@ function contentAnimation(data) {
   tl.from(data.next.container, {
     opacity: 0,
   });
+  document.querySelector("#drawer-input").checked = false;
 }
 
 document.addEventListener("DOMContentLoaded", () => {

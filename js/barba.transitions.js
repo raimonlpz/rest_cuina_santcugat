@@ -1,3 +1,5 @@
+import Grid from "./grid.js";
+
 function delay(n) {
   n = n || 2000;
   return new Promise((done) => {
@@ -31,6 +33,10 @@ function contentAnimation(data) {
   var tl = gsap.timeline();
   // tl.from(".left", { duration: 1.5, translateY: 50, opacity: 0 });
   tl.from("img", { clipPath: "" }).then(() => {
+    if (data.trigger.id === "gallery") {
+      const grid = new Grid(document.querySelector(".gallery_grid"));
+    }
+
     if (data.trigger.id == "home") {
       let gridItems = document.querySelectorAll(".grid__item");
       const viewportHeight = window.innerHeight;

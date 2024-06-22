@@ -1,5 +1,6 @@
 // Import the necessary function for preloading images
 import { preloadImages } from "./utils.js";
+import Grid from "./grid.js";
 
 // Define a variable that will store the Lenis smooth scrolling object
 let lenis;
@@ -100,4 +101,6 @@ preloadImages(".grid__item-img-inner").then(() => {
   initSmoothScrolling();
   scroll(gridItems);
   document.body.classList.remove("loading");
+  // Initialize grid
+  const grid = new Grid(document.querySelector(".gallery_grid"));
 });

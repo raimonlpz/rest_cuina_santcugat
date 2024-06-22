@@ -1027,8 +1027,9 @@ Experience
   justify-content: center;
   align-items: center;
 }
+
 .experience h5 {
-  font-size: 8rem;
+  font-size: 5rem;
   font-weight: 300;
   font-family: "PP Playground", cursive;
 }
@@ -1081,6 +1082,10 @@ Experience
 }
 
 @media only screen and (min-width: 768px) {
+  .experience h5 {
+    font-size: 8rem;
+  }
+
   .experience-section__one {
     display: flex;
     flex-direction: row;

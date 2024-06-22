@@ -1112,8 +1112,6 @@ Carta
 
 /* Menu Heading */
 .menu__heading {
-  font-weight: bold;
-
   position: relative;
   z-index: 1;
   padding: 0 20px; /* Match the background color */

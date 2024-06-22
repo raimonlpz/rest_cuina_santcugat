@@ -1103,6 +1103,7 @@ Experience
   gap: 50px;
   width: 90%;
   height: 150vh;
+  min-height: 1200px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -1132,6 +1133,7 @@ Experience
 }
 .div3 {
   grid-area: 5 / 1 / 7 / 4;
+  overflow: visible;
 }
 .div4 {
   grid-area: 1 / 4 / 4 / 7;

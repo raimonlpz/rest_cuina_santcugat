@@ -1026,6 +1026,7 @@ Experience
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .experience h5 {
@@ -1069,7 +1070,7 @@ Experience
 }
 
 .experience-section__two {
-  margin-top: 10rem;
+  margin-top: 15rem;
   width: 100%;
   height: 75vh;
   overflow: hidden;
@@ -1079,6 +1080,126 @@ Experience
   width: 100%;
   height: auto;
   object-position: center;
+}
+
+.experience h5:nth-child(2) {
+  margin-top: 15rem;
+}
+
+.experience-section__three {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid Parent */
+.experience-section__three .parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 50px;
+  width: 90%;
+  height: 150vh;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Grid Items */
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Grid Areas */
+.div1 {
+  grid-area: 1 / 1 / 3 / 4;
+}
+.div2 {
+  grid-area: 3 / 1 / 5 / 4;
+}
+.div3 {
+  grid-area: 5 / 1 / 7 / 4;
+}
+.div4 {
+  grid-area: 1 / 4 / 4 / 7;
+}
+.div5 {
+  grid-area: 4 / 4 / 7 / 7;
+}
+
+/* Image Styles */
+.div2 img,
+.div4 img,
+.div5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the container without distortion */
+  object-position: center; /* Centers the image */
+}
+
+/* Text Styles */
+.experience-section__three span {
+  margin-bottom: 10px;
+  font-size: 5rem;
+  font-weight: 300;
+  font-family: "PP Playground", cursive;
+}
+
+.experience-section__three p {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 200;
+  line-height: 2.2rem;
+}
+
+.experience-section__three .card {
+  margin-top: 4rem;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  .experience-section__three .parent {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat(5, auto); /* Adjust row heights to fit content */
+    height: max-content;
+  }
+
+  /* Adjust Grid Areas for Single Column Layout */
+  .div1 {
+    grid-area: auto;
+    height: max-content;
+  }
+  .div2 {
+    grid-area: auto;
+    height: max-content;
+    overflow: hidden;
+  }
+  .div3 {
+    grid-area: auto;
+    height: max-content;
+    overflow: visible;
+  }
+  .div4 {
+    grid-area: auto;
+    height: max-content;
+  }
+  .div5 {
+    grid-area: auto;
+    height: max-content;
+  }
 }
 
 @media only screen and (min-width: 768px) {

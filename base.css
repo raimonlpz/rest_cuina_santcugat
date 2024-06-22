@@ -1393,6 +1393,7 @@ Gallery
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 .gallery h5 {
   font-size: 8rem;

@@ -773,6 +773,7 @@ span.frame__demos-item:not(:first-child) {
   transform-origin: 15vw 19vh;
   box-shadow: 100vmin 0 12.532657102781057vmin currentColor;
 }
+/* 
 .background span:nth-child(21) {
   color: #d6501b;
   top: 24%;
@@ -817,8 +818,8 @@ span.frame__demos-item:not(:first-child) {
   animation-delay: -96s;
   transform-origin: -5vw -24vh;
   box-shadow: 100vmin 0 12.649292315661654vmin currentColor;
-}
-.background span:nth-child(26) {
+} */
+/* .background span:nth-child(26) {
   color: #f88819;
   top: 23%;
   left: 32%;
@@ -871,7 +872,7 @@ span.frame__demos-item:not(:first-child) {
   animation-delay: -98s;
   transform-origin: 10vw 22vh;
   box-shadow: -100vmin 0 12.911441386567665vmin currentColor;
-}
+} */
 
 /**
 Nav Mobile

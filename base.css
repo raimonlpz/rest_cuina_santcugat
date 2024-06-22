@@ -1055,6 +1055,7 @@ Experience
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .experience h5 {
@@ -1265,6 +1266,7 @@ Visitans
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 .visit h5 {
   font-size: 8rem;
@@ -1311,6 +1313,7 @@ Carta
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 .menu h5 {
   font-size: 8rem;
@@ -1394,6 +1397,7 @@ Gallery
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 .gallery h5 {
   font-size: 8rem;

@@ -33,6 +33,8 @@ function contentAnimation(data) {
   var tl = gsap.timeline();
   // tl.from(".left", { duration: 1.5, translateY: 50, opacity: 0 });
   tl.from("img", { clipPath: "" }).then(() => {
+    window.scrollTo({ top: 0, duration: 2 });
+
     if (data.trigger.id === "gallery") {
       const grid = new Grid(document.querySelector(".gallery_grid"));
     }

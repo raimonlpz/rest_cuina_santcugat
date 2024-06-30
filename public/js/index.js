@@ -100,7 +100,6 @@ export function scroll(items) {
 preloadImages(".grid__item-img-inner").then(() => {
   initSmoothScrolling();
   scroll(gridItems);
-  document.body.classList.remove("loading");
   // Initialize grid
   const grid = new Grid(document.querySelector(".gallery_grid"));
 });

@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const experience = await fetchExperience();
     const gallery = await fetchGallery();
 
+    document.body.classList.remove("loading");
+
     window.HOME_DATA = home.attributes;
     window.MENU_DATA = menu;
     window.OPENING_DATA = opening[0].attributes;

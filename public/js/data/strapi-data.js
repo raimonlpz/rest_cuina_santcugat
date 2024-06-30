@@ -36,7 +36,7 @@ function injectImgSlider(data, url, index) {
   const slide = document.querySelector(`#slide${index}`);
   if (slide) {
     slide.style.backgroundImage = `
-      url(${url}${data[`slide_${index}`].data.attributes.formats.large.url})
+      url(${url}${data[`slide_${index}`].data.attributes.formats.medium.url})
   `.replace("/api/", "");
   }
 }
@@ -55,7 +55,7 @@ export function populateExperienceData() {
 
   // Block1 Img
   const block1_img =
-    `${url}${data.block1_img.data[0].attributes.formats.large.url}`.replace(
+    `${url}${data.block1_img.data[0].attributes.formats.medium.url}`.replace(
       "/api/",
       ""
     );
@@ -77,17 +77,17 @@ export function populateExperienceData() {
   const block2_img2_container = document.querySelector("#block2_img2");
   const block2_img3_container = document.querySelector("#block2_img3");
   const block2_img1 =
-    `${url}${data.block2_img1.data[0].attributes.formats.large.url}`.replace(
+    `${url}${data.block2_img1.data[0].attributes.formats.medium.url}`.replace(
       "/api/",
       ""
     );
   const block2_img2 =
-    `${url}${data.block2_img2.data[0].attributes.formats.large.url}`.replace(
+    `${url}${data.block2_img2.data[0].attributes.formats.medium.url}`.replace(
       "/api/",
       ""
     );
   const block2_img3 =
-    `${url}${data.block2_img3.data[0].attributes.formats.large.url}`.replace(
+    `${url}${data.block2_img3.data[0].attributes.formats.medium.url}`.replace(
       "/api/",
       ""
     );

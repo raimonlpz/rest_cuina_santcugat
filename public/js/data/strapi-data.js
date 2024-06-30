@@ -35,17 +35,14 @@ export function populateHomeData() {
 function injectImgSlider(data, url, index) {
   const slide = document.querySelector(`#slide${index}`);
   if (slide) {
-    if (index === 4 || index === 5) {
-      slide.style.backgroundImage = `
-      url(${url}${data[`slide_${index}`].data[0].attributes.formats.large.url})
-  `.replace("/api/", "");
-    } else {
-      slide.style.backgroundImage = `
+    slide.style.backgroundImage = `
       url(${url}${data[`slide_${index}`].data.attributes.formats.large.url})
   `.replace("/api/", "");
-    }
   }
 }
+
+export function populateGalleryData() {}
+function injectImgGallery(data, url, index) {}
 
 export function populateExperienceData() {
   const data = window.EXPERIENCE_DATA;

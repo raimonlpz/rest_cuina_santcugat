@@ -27,7 +27,7 @@ export function populateAddressData() {
 export function populateHomeData() {
   const data = window.HOME_DATA;
   const url = window.API_URL;
-  for (let i = 1; i < 13; i++) {
+  for (let i = 1; i < 14; i++) {
     injectImgSlider(data, url, i);
   }
 }
@@ -36,7 +36,7 @@ function injectImgSlider(data, url, index) {
   const slide = document.querySelector(`#slide${index}`);
   if (slide) {
     slide.style.backgroundImage = `
-      url(${url}${data[`slide_${index}`].data.attributes.formats.medium.url})
+      url(${url}${data[`slide_${index}`].data.attributes.url})
   `.replace("/api/", "");
   }
 }
@@ -49,16 +49,15 @@ export function populateExperienceData() {
   const url = window.API_URL;
 
   if (!data) return;
-  const b1 = data.experience_block.filter((d) => d.id === 1)[0];
-  const b2 = data.experience_block.filter((d) => d.id === 2)[0];
-  const b3 = data.experience_block.filter((d) => d.id === 3)[0];
+  const b1 = data.experience_block.filter((d) => d.id === 7)[0];
+  const b2 = data.experience_block.filter((d) => d.id === 8)[0];
+  const b3 = data.experience_block.filter((d) => d.id === 9)[0];
 
   // Block1 Img
-  const block1_img =
-    `${url}${data.block1_img.data[0].attributes.formats.medium.url}`.replace(
-      "/api/",
-      ""
-    );
+  const block1_img = `${url}${data.block1_img.data[0].attributes.url}`.replace(
+    "/api/",
+    ""
+  );
   const block1_img_container = document.querySelector("#block1_img");
   if (block1_img_container) {
     block1_img_container.src = block1_img;
@@ -77,20 +76,11 @@ export function populateExperienceData() {
   const block2_img2_container = document.querySelector("#block2_img2");
   const block2_img3_container = document.querySelector("#block2_img3");
   const block2_img1 =
-    `${url}${data.block2_img1.data[0].attributes.formats.medium.url}`.replace(
-      "/api/",
-      ""
-    );
+    `${url}${data.block2_img1.data[0].attributes.url}`.replace("/api/", "");
   const block2_img2 =
-    `${url}${data.block2_img2.data[0].attributes.formats.medium.url}`.replace(
-      "/api/",
-      ""
-    );
+    `${url}${data.block2_img2.data[0].attributes.url}`.replace("/api/", "");
   const block2_img3 =
-    `${url}${data.block2_img3.data[0].attributes.formats.medium.url}`.replace(
-      "/api/",
-      ""
-    );
+    `${url}${data.block2_img3.data[0].attributes.url}`.replace("/api/", "");
   if (block2_img1_container) {
     block2_img1_container.src = block2_img1;
   }

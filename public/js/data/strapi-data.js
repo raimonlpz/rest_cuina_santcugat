@@ -1,4 +1,4 @@
-export function populateOpeningData() {
+function populateOpeningData() {
   const data = window.OPENING_DATA;
   if (!data) return;
   const cardHoursFooter = document.querySelectorAll(".card_hours");
@@ -12,7 +12,7 @@ export function populateOpeningData() {
   });
 }
 
-export function populateAddressData() {
+function populateAddressData() {
   const data = window.ADDRESS_DATA;
   if (!data) return;
   const cardAddressFooter = document.querySelectorAll(".card_address");
@@ -24,7 +24,7 @@ export function populateAddressData() {
   });
 }
 
-export function populateHomeData() {
+function populateHomeData() {
   const data = window.HOME_DATA;
   const url = window.API_URL;
   for (let i = 1; i < 14; i++) {
@@ -41,7 +41,7 @@ function injectImgSlider(data, url, index) {
   }
 }
 
-export function populateGalleryData() {
+function populateGalleryData() {
   const data = window.GALLERY_DATA;
   const url = window.API_URL;
   for (let i = 0; i < 11; i++) {
@@ -58,14 +58,14 @@ function injectImgGallery(data, url, index) {
   }
 }
 
-export function populateExperienceData() {
+function populateExperienceData() {
   const data = window.EXPERIENCE_DATA;
   const url = window.API_URL;
 
   if (!data) return;
-  const b1 = data.experience_block.filter((d) => d.id === 7)[0];
-  const b2 = data.experience_block.filter((d) => d.id === 8)[0];
-  const b3 = data.experience_block.filter((d) => d.id === 9)[0];
+  const b1 = data.experience_block.filter((d) => d.id === 1)[0];
+  const b2 = data.experience_block.filter((d) => d.id === 2)[0];
+  const b3 = data.experience_block.filter((d) => d.id === 3)[0];
 
   // Block1 Img
   const block1_img = `${url}${data.block1_img.data[0].attributes.url}`.replace(
@@ -141,7 +141,7 @@ export function populateExperienceData() {
   }
 }
 
-export function populateMenuData() {
+function populateMenuData() {
   const data = window.MENU_DATA;
   if (!data) return;
 

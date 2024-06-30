@@ -1,11 +1,3 @@
-import {
-  map,
-  lerp,
-  getMousePos,
-  calcWinsize,
-  getRandomNumber,
-} from "./utils.js";
-
 // Calculate the viewport size
 let winsize = calcWinsize();
 window.addEventListener("resize", () => (winsize = calcWinsize()));
@@ -50,7 +42,7 @@ class GridItem {
   }
 }
 
-export default class Grid {
+class Grid {
   constructor(el) {
     this.DOM = { el: el };
     this.gridItems = [];

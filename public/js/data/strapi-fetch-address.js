@@ -1,4 +1,4 @@
-export async function fetchAddress() {
+async function fetchAddress() {
   try {
     const response = await fetch(`${window.API_URL}address?populate=*`, {
       headers: { Authorization: `Bearer ${window.API_TOKEN}` },

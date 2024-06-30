@@ -1,4 +1,4 @@
-export async function fetchExperience() {
+async function fetchExperience() {
   try {
     const response = await fetch(`${window.API_URL}experience?populate=*`, {
       headers: { Authorization: `Bearer ${window.API_TOKEN}` },

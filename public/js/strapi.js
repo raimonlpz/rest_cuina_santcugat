@@ -1,18 +1,3 @@
-import { fetchHome } from "./data/strapi-fetch-home.js";
-import { fetchMenu } from "./data/strapi-fetch-menu.js";
-import { fetchOpening } from "./data/strapi-fetch-opening.js";
-import { fetchAddress } from "./data/strapi-fetch-address.js";
-import { fetchExperience } from "./data/strapi-fetch-experience.js";
-import { fetchGallery } from "./data/strapi-fetch-gallery.js";
-import {
-  populateExperienceData,
-  populateOpeningData,
-  populateAddressData,
-  populateMenuData,
-  populateHomeData,
-  populateGalleryData,
-} from "./data/strapi-data.js";
-
 async function fetchConfig() {
   const response = await fetch("/config");
   const config = await response.json();

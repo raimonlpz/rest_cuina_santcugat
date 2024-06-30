@@ -1,4 +1,4 @@
-export async function fetchOpening() {
+async function fetchOpening() {
   try {
     const response = await fetch(`${window.API_URL}openings?populate=*`, {
       headers: { Authorization: `Bearer ${window.API_TOKEN}` },

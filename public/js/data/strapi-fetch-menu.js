@@ -1,4 +1,4 @@
-export async function fetchMenu() {
+async function fetchMenu() {
   try {
     const response = await fetch(`${window.API_URL}menu-dishes?populate=*`, {
       headers: { Authorization: `Bearer ${window.API_TOKEN}` },

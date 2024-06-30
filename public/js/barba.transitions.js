@@ -1,13 +1,3 @@
-import Grid from "./grid.js";
-import {
-  populateExperienceData,
-  populateOpeningData,
-  populateAddressData,
-  populateMenuData,
-  populateHomeData,
-  populateGalleryData,
-} from "./data/strapi-data.js";
-
 function delay(n) {
   n = n || 2000;
   return new Promise((done) => {

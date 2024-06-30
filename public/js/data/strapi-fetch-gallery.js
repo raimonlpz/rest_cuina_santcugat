@@ -1,4 +1,4 @@
-export async function fetchGallery() {
+async function fetchGallery() {
   try {
     const response = await fetch(`${window.API_URL}gallery?populate=*`, {
       headers: { Authorization: `Bearer ${window.API_TOKEN}` },

@@ -1,7 +1,3 @@
-// Import the necessary function for preloading images
-import { preloadImages } from "./utils.js";
-import Grid from "./grid.js";
-
 // Define a variable that will store the Lenis smooth scrolling object
 let lenis;
 
@@ -31,7 +27,7 @@ const initSmoothScrolling = () => {
   requestAnimationFrame(scrollFn);
 };
 
-export function scroll(items) {
+function scroll(items) {
   const viewportHeight = window.innerHeight;
   const endValue = viewportHeight / 2;
   // Loop through each grid item to add animations

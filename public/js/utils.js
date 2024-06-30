@@ -69,13 +69,3 @@ const getGrid = (selector) => {
 
   return elements;
 };
-
-export {
-  map,
-  lerp,
-  calcWinsize,
-  getRandomNumber,
-  getMousePos,
-  preloadImages,
-  getGrid,
-};

@@ -3,12 +3,14 @@ import { fetchMenu } from "./data/strapi-fetch-menu.js";
 import { fetchOpening } from "./data/strapi-fetch-opening.js";
 import { fetchAddress } from "./data/strapi-fetch-address.js";
 import { fetchExperience } from "./data/strapi-fetch-experience.js";
+import { fetchGallery } from "./data/strapi-fetch-gallery.js";
 import {
   populateExperienceData,
   populateOpeningData,
   populateAddressData,
   populateMenuData,
   populateHomeData,
+  populateGalleryData,
 } from "./data/strapi-data.js";
 
 async function fetchConfig() {
@@ -26,17 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const opening = await fetchOpening();
     const address = await fetchAddress();
     const experience = await fetchExperience();
+    const gallery = await fetchGallery();
 
     window.HOME_DATA = home.attributes;
     window.MENU_DATA = menu;
     window.OPENING_DATA = opening[0].attributes;
     window.ADDRESS_DATA = address.attributes;
     window.EXPERIENCE_DATA = experience.attributes;
+    window.GALLERY_DATA = gallery.attributes;
 
     populateHomeData();
     populateExperienceData();
     populateOpeningData();
     populateAddressData();
     populateMenuData();
+    populateGalleryData();
   });
 });

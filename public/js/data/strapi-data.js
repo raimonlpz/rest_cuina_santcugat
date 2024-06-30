@@ -41,8 +41,22 @@ function injectImgSlider(data, url, index) {
   }
 }
 
-export function populateGalleryData() {}
-function injectImgGallery(data, url, index) {}
+export function populateGalleryData() {
+  const data = window.GALLERY_DATA;
+  const url = window.API_URL;
+  for (let i = 0; i < 11; i++) {
+    injectImgGallery(data, url, i);
+  }
+}
+
+function injectImgGallery(data, url, index) {
+  const grid = document.querySelector(`#grid${index}`);
+  if (grid) {
+    grid.style.backgroundImage = `
+      url(${url}${data[`grid_${index}`].data.attributes.formats.medium.url})
+  `.replace("/api/", "");
+  }
+}
 
 export function populateExperienceData() {
   const data = window.EXPERIENCE_DATA;

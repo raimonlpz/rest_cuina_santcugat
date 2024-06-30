@@ -5,6 +5,7 @@ import {
   populateAddressData,
   populateMenuData,
   populateHomeData,
+  populateGalleryData,
 } from "./data/strapi-data.js";
 
 function delay(n) {
@@ -57,6 +58,10 @@ function contentAnimation(data) {
 
     if (data.trigger.id === "experience") {
       populateExperienceData();
+    }
+
+    if (data.trigger.id === "gallery") {
+      populateGalleryData();
     }
 
     if (data.trigger.id == "home") {

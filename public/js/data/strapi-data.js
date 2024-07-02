@@ -40,8 +40,6 @@ function populateHomeData() {
   for (let i = 1; i < 14; i++) {
     injectImgSlider(data, url, i);
   }
-
-  console.log(data);
 }
 
 function injectImgSlider(data, url, index) {
@@ -85,9 +83,9 @@ function populateExperienceData() {
   const url = window.API_URL;
 
   if (!data) return;
-  const b1 = data.experience_block.filter((d) => d.id === 1 || d.id === 7)[0];
-  const b2 = data.experience_block.filter((d) => d.id === 2 || d.id === 8)[0];
-  const b3 = data.experience_block.filter((d) => d.id === 3 || d.id === 9)[0];
+  const b1 = data.experience_block.filter((d) => d.id === 1 || d.id === 13)[0];
+  const b2 = data.experience_block.filter((d) => d.id === 2 || d.id === 14)[0];
+  const b3 = data.experience_block.filter((d) => d.id === 3 || d.id === 15)[0];
 
   // Block1 Img
   const block1_img = `${url}${data.block1_img.data[0].attributes.url}`.replace(

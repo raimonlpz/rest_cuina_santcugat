@@ -1386,6 +1386,10 @@ Carta
   right: 0;
 }
 
+.menu_content {
+  text-align: center;
+}
+
 .menu__dish {
   font-size: 1rem;
   font-weight: 200;
@@ -1491,4 +1495,72 @@ Gallery
 
 .pos-10 {
   grid-area: 37 / 39 / 48 / 47;
+}
+
+.gallery__slideshow {
+  width: 100vw;
+  height: max-content;
+  margin-top: calc(100vh - 10%);
+}
+
+.gallery__slideshow img {
+  width: 40vw;
+  height: auto;
+  margin-left: 50%;
+  margin-bottom: 10rem;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .gallery__slideshow img {
+    width: 95vw;
+  }
+}
+
+/**
+Chefs Block
+*/
+.chefs-block {
+  width: 60vw;
+  height: max-content;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.chefs-overview {
+  font-weight: 200;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.chefs-content {
+  display: flex;
+  gap: 6rem;
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .chefs-block {
+    width: 92vw;
+  }
+  .chefs-content {
+    flex-direction: column;
+  }
+}
+
+.murilo p,
+.raul p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: 100;
+  line-height: 1.75rem;
+}
+
+.murilo span,
+.raul span {
+  font-size: 4.5rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  font-family: "PP Playground", cursive;
 }

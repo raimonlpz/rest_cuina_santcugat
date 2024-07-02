@@ -1,8 +1,11 @@
-async function fetchMenu() {
+async function fetchMenu(locale = "es") {
   try {
-    const response = await fetch(`${window.API_URL}menu-dishes?populate=*`, {
-      headers: { Authorization: `Bearer ${window.API_TOKEN}` },
-    });
+    const response = await fetch(
+      `${window.API_URL}menu-dishes?populate=*&locale=${locale}`,
+      {
+        headers: { Authorization: `Bearer ${window.API_TOKEN}` },
+      }
+    );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }

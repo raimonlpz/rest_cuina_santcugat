@@ -1,9 +1,9 @@
 // Calculate the viewport size
-let winsize = calcWinsize();
+var winsize = calcWinsize();
 window.addEventListener("resize", () => (winsize = calcWinsize()));
 
 // Track the mouse position
-let mousepos = { x: winsize.width / 2, y: winsize.height / 2 };
+var mousepos = { x: winsize.width / 2, y: winsize.height / 2 };
 window.addEventListener("mousemove", (ev) => (mousepos = getMousePos(ev)));
 
 class GridItem {

@@ -28,6 +28,14 @@ function pageTransition(data) {
 }
 
 function contentAnimation(data) {
+  if (data.trigger.id === "visit") {
+    translateVisit();
+  }
+
+  if (data.trigger.id === "experience") {
+    translateExperience();
+  }
+
   var tl = gsap.timeline();
   // tl.from(".left", { duration: 1.5, translateY: 50, opacity: 0 });
   tl.from("img", { clipPath: "" }).then(() => {

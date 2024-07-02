@@ -1,8 +1,11 @@
-async function fetchExperience() {
+async function fetchExperience(locale = "es") {
   try {
-    const response = await fetch(`${window.API_URL}experience?populate=*`, {
-      headers: { Authorization: `Bearer ${window.API_TOKEN}` },
-    });
+    const response = await fetch(
+      `${window.API_URL}experience?populate=*&locale=${locale}`,
+      {
+        headers: { Authorization: `Bearer ${window.API_TOKEN}` },
+      }
+    );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }

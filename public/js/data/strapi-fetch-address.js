@@ -1,8 +1,11 @@
-async function fetchAddress() {
+async function fetchAddress(locale = "es") {
   try {
-    const response = await fetch(`${window.API_URL}address?populate=*`, {
-      headers: { Authorization: `Bearer ${window.API_TOKEN}` },
-    });
+    const response = await fetch(
+      `${window.API_URL}address?populate=*&locale=${locale}`,
+      {
+        headers: { Authorization: `Bearer ${window.API_TOKEN}` },
+      }
+    );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }

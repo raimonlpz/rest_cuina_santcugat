@@ -87,7 +87,7 @@
         <a class="frame__prev" href="./menu" id="menu">La Carta</a>
         <a class="frame__prev" href="./gallery" id="gallery">Galeria</a>
       </div>
-      <a class="lang">ES / CA</a>
+      <a class="lang" id="locale">ES / CA</a>
 
       <nav class="nav-content">
         <ul class="items">
@@ -177,6 +177,8 @@
               </div>
             </div>
           </div>
+
+          <div class="gallery__slideshow"></div>
         </div>
       </div>
     </main>
@@ -200,15 +202,15 @@
             <span>Sant Cugat del Vallès, Barcelona</span>
           </div>
           <div class="card_hours">
-            <span>HORARI</span>
+            <span id="hours">HORARI</span>
             <span>Miércoles - Domingo</span>
             <span>13:00h - 15:30h</span>
             <span>20:00h - 22:30h</span>
           </div>
           <div class="card_legal">
-            <span>Aviso Legal</span>
-            <span>Política de Privacidad</span>
-            <span>Política de Cookies</span>
+            <span id="legal">Aviso Legal</span>
+            <span id="privacity">Política de Privacidad</span>
+            <span id="cookies">Política de Cookies</span>
           </div>
         </div>
         <div class="card">
@@ -218,7 +220,15 @@
         </div>
         <div class="card">
           <div class="card_fork">
-            <a href="">RESERVA a The Fork</a>
+            <div class="tf-widget-button">
+              <a
+                class="tf-button-link"
+                href="https://widget.thefork.com/es/6339224a-7ba9-4c8e-97f8-1bd453941c7f?lang=es"
+                target="_blank"
+                rel="noopener"
+                >RESERVA a The Fork</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -253,5 +263,6 @@
     <script src="js/index.js"></script>
     <script src="js/barba.transitions.js"></script>
     <script src="js/strapi.js"></script>
+    <script src="js/translations.js"></script>
   </body>
 </html>

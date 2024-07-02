@@ -1,10 +1,20 @@
+function fetchLocaleStoredData() {
+  const locale = window.localStorage.getItem("locale");
+  if (locale) {
+    return locale;
+  }
+  return "es";
+}
+
 function populateOpeningData() {
   const data = window.OPENING_DATA;
+  const locale = fetchLocaleStoredData();
+
   if (!data) return;
   const cardHoursFooter = document.querySelectorAll(".card_hours");
   cardHoursFooter.forEach((c) => {
     c.innerHTML = `
-        <span>HORARI</span>
+        <span>${locale == "es" ? "HORARIO" : "HORARI"}</span>
         <span>${data.day_range}</span>
         <span>${data.hour_range_first}</span>
         <span>${data.hour_range_last}</span>
@@ -30,6 +40,8 @@ function populateHomeData() {
   for (let i = 1; i < 14; i++) {
     injectImgSlider(data, url, i);
   }
+
+  console.log(data);
 }
 
 function injectImgSlider(data, url, index) {
@@ -47,6 +59,16 @@ function populateGalleryData() {
   for (let i = 0; i < 11; i++) {
     injectImgGallery(data, url, i);
   }
+
+  const gallerySlideshow = document.querySelector(".gallery__slideshow");
+  if (!gallerySlideshow) return;
+  data.repository.data.forEach((r) => {
+    gallerySlideshow.innerHTML += `
+        <img src="${(url + r.attributes.url).replace("/api/", "")}" alt="${
+      r.attributes.name
+    }">
+    `;
+  });
 }
 
 function injectImgGallery(data, url, index) {
@@ -63,9 +85,9 @@ function populateExperienceData() {
   const url = window.API_URL;
 
   if (!data) return;
-  const b1 = data.experience_block.filter((d) => d.id === 1)[0];
-  const b2 = data.experience_block.filter((d) => d.id === 2)[0];
-  const b3 = data.experience_block.filter((d) => d.id === 3)[0];
+  const b1 = data.experience_block.filter((d) => d.id === 1 || d.id === 7)[0];
+  const b2 = data.experience_block.filter((d) => d.id === 2 || d.id === 8)[0];
+  const b3 = data.experience_block.filter((d) => d.id === 3 || d.id === 9)[0];
 
   // Block1 Img
   const block1_img = `${url}${data.block1_img.data[0].attributes.url}`.replace(
@@ -145,22 +167,31 @@ function populateMenuData() {
   const data = window.MENU_DATA;
   if (!data) return;
 
+  const locale = fetchLocaleStoredData();
+
   const shared = data.filter((d) => d.attributes.category === "shared");
   const meat = data.filter((d) => d.attributes.category === "meat");
   const sea = data.filter((d) => d.attributes.category === "sea");
   const dessert = data.filter((d) => d.attributes.category === "dessert");
-  const vegetal = data.filter((d) => d.attributes.category === "vegetal");
+  // const vegetal = data.filter((d) => d.attributes.category === "vegetal");
   const menuContent = document.querySelector(".menu_content");
   // Shared block
   if (!menuContent) return;
   menuContent.innerHTML = `
     <div class="menu__block">
-        <span class="menu__heading">Per Compartir</span>
+        <span class="menu__heading">${
+          locale === "es" ? "Para Compartir" : "Per Compartir"
+        }</span>
     </div>
   `;
   shared.forEach((d) => {
     menuContent.innerHTML += `
-        <div class="menu__dish">${d.attributes.name} / ${d.attributes.price} €</div>
+        <div class="menu__dish">${d.attributes.name}</div>
+        <div style="margin-top: .25rem">${
+          d.attributes.price
+        } € / <span style='font-size: .85rem; color: orange; opacity: .65'> ${
+      d.attributes.allergens ?? "-"
+    }</span></div>
     `;
   });
   // Sea block
@@ -171,31 +202,43 @@ function populateMenuData() {
   `;
   sea.forEach((d) => {
     menuContent.innerHTML += `
-        <div class="menu__dish">${d.attributes.name} / ${d.attributes.price} €</div>
-    `;
+    <div class="menu__dish">${d.attributes.name}</div>
+    <div style="margin-top: .25rem">${
+      d.attributes.price
+    } € / <span style='font-size: .85rem; color: orange; opacity: .65'> ${
+      d.attributes.allergens ?? "-"
+    }</span></div>
+`;
   });
   // Meat block
   menuContent.innerHTML += `
     <div class="menu__block">
-        <span class="menu__heading">Carns</span>
+        <span class="menu__heading">${
+          locale === "es" ? "Carnes" : "Carns"
+        }</span>
     </div>
   `;
   meat.forEach((d) => {
     menuContent.innerHTML += `
-        <div class="menu__dish">${d.attributes.name} / ${d.attributes.price} €</div>
+        <div class="menu__dish">${d.attributes.name}</div>
+        <div style="margin-top: .25rem">${
+          d.attributes.price
+        } € / <span style='font-size: .85rem; color: orange; opacity: .65'> ${
+      d.attributes.allergens ?? "-"
+    }</span></div>
     `;
   });
   // Vegetal block
-  menuContent.innerHTML += `
-    <div class="menu__block">
-        <span class="menu__heading">Vegetal</span>
-    </div>
-  `;
-  vegetal.forEach((d) => {
-    menuContent.innerHTML += `
-        <div class="menu__dish">${d.attributes.name} / ${d.attributes.price} €</div>
-    `;
-  });
+  // menuContent.innerHTML += `
+  //   <div class="menu__block">
+  //       <span class="menu__heading">Vegetal</span>
+  //   </div>
+  // `;
+  // vegetal.forEach((d) => {
+  //   menuContent.innerHTML += `
+  //       <div class="menu__dish">${d.attributes.name} / ${d.attributes.price} €</div>
+  //   `;
+  // });
   // Dessert block
   menuContent.innerHTML += `
    <div class="menu__block">
@@ -204,7 +247,12 @@ function populateMenuData() {
  `;
   dessert.forEach((d) => {
     menuContent.innerHTML += `
-       <div class="menu__dish">${d.attributes.name} / ${d.attributes.price} €</div>
-   `;
+        <div class="menu__dish">${d.attributes.name}</div>
+        <div style="margin-top: .25rem">${
+          d.attributes.price
+        } € / <span style='font-size: .85rem; color: orange; opacity: .65'> ${
+      d.attributes.allergens ?? "-"
+    }</span></div>
+    `;
   });
 }

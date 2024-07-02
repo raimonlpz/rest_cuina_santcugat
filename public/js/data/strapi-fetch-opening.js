@@ -1,8 +1,11 @@
-async function fetchOpening() {
+async function fetchOpening(locale = "es") {
   try {
-    const response = await fetch(`${window.API_URL}openings?populate=*`, {
-      headers: { Authorization: `Bearer ${window.API_TOKEN}` },
-    });
+    const response = await fetch(
+      `${window.API_URL}openings?populate=*&locale=${locale}`,
+      {
+        headers: { Authorization: `Bearer ${window.API_TOKEN}` },
+      }
+    );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }

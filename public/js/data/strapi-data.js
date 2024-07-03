@@ -83,9 +83,15 @@ function populateExperienceData() {
   const url = window.API_URL;
 
   if (!data) return;
-  const b1 = data.experience_block.filter((d) => d.id === 1 || d.id === 13)[0];
-  const b2 = data.experience_block.filter((d) => d.id === 2 || d.id === 14)[0];
-  const b3 = data.experience_block.filter((d) => d.id === 3 || d.id === 15)[0];
+  const b1 = data.experience_block.filter(
+    (d) => d.id === 1 || d.id === 7 || d.id === 13
+  )[0];
+  const b2 = data.experience_block.filter(
+    (d) => d.id === 2 || d.id === 8 || d.id === 14
+  )[0];
+  const b3 = data.experience_block.filter(
+    (d) => d.id === 3 || d.id === 9 || d.id === 15
+  )[0];
 
   // Block1 Img
   const block1_img = `${url}${data.block1_img.data[0].attributes.url}`.replace(
@@ -138,7 +144,15 @@ function populateExperienceData() {
         </p>
          <div class="card">
             <div class="card_fork">
-                <a href="">RESERVA a The Fork</a>
+               <div class="tf-widget-button">
+                  <a
+                    class="tf-button-link"
+                    href="https://widget.thefork.com/es/6339224a-7ba9-4c8e-97f8-1bd453941c7f?lang=es"
+                    target="_blank"
+                    rel="noopener"
+                    >RESERVA a The Fork</a
+                  >
+              </div>
             </div>
         </div>
     `;

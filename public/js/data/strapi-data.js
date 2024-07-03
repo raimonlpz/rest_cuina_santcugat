@@ -206,7 +206,7 @@ function populateMenuData() {
   menuContent.innerHTML = `
     <div class="menu__block">
         <span class="menu__heading">${
-          locale === "es" ? "Para Compartir" : "Per Compartir"
+          locale === "es" ? "A Compartir" : "A Compartir"
         }</span>
     </div>
   `;

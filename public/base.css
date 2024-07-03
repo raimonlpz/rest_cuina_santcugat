@@ -1,42 +1,3 @@
-@font-face {
-  font-family: "PP Playground";
-  src: url("fonts/PPPlayground-Thin.eot");
-  src: url("fonts/PPPlayground-Thin.eot?#iefix") format("embedded-opentype"),
-    url("fonts/PPPlayground-Thin.woff2") format("woff2"),
-    url("fonts/PPPlayground-Thin.woff") format("woff"),
-    url("fonts/PPPlayground-Thin.ttf") format("truetype"),
-    url("fonts/PPPlayground-Thin.svg#PPPlayground-Thin") format("svg");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Playground";
-  src: url("fonts/PPPlayground-Medium.eot");
-  src: url("fonts/PPPlayground-Medium.eot?#iefix") format("embedded-opentype"),
-    url("fonts/PPPlayground-Medium.woff2") format("woff2"),
-    url("fonts/PPPlayground-Medium.woff") format("woff"),
-    url("fonts/PPPlayground-Medium.ttf") format("truetype"),
-    url("fonts/PPPlayground-Medium.svg#PPPlayground-Medium") format("svg");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Playground";
-  src: url("fonts/PPPlayground-Light.eot");
-  src: url("fonts/PPPlayground-Light.eot?#iefix") format("embedded-opentype"),
-    url("fonts/PPPlayground-Light.woff2") format("woff2"),
-    url("fonts/PPPlayground-Light.woff") format("woff"),
-    url("fonts/PPPlayground-Light.ttf") format("truetype"),
-    url("fonts/PPPlayground-Light.svg#PPPlayground-Light") format("svg");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
 *,
 *::after,
 *::before {
@@ -57,6 +18,7 @@
   --color-year: #b9b3af;
   --img-ratio: 1.5;
   --s: 1;
+  --cursive-font: "League Script", cursive;
 }
 
 *::selection {
@@ -283,8 +245,8 @@ GRID
 
 .frame__title span {
   font-optical-sizing: auto;
-  font-family: "PP Playground", cursive;
-  font-size: clamp(1.5rem, 15vw, 13rem);
+  font-family: var(--cursive-font);
+  font-size: clamp(1.5rem, 12vw, 11rem);
 }
 
 .frame__back {
@@ -474,7 +436,7 @@ span.frame__demos-item:not(:first-child) {
 }
 .card_logo span {
   font-optical-sizing: auto;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
   font-size: clamp(1.5rem, 6vw, 4.5rem);
 }
 
@@ -1068,7 +1030,7 @@ Experience
 .experience h5 {
   font-size: 5rem;
   font-weight: 300;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
 }
 
 .experience-section__one {
@@ -1091,7 +1053,7 @@ Experience
 .experience-section__one div span {
   font-size: 4rem;
   font-weight: 300;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
 }
 .experience-section__one div p {
   font-size: 1.15rem;
@@ -1193,7 +1155,7 @@ Experience
   margin-bottom: 10px;
   font-size: 5rem;
   font-weight: 300;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
 }
 
 .experience-section__three p {
@@ -1278,7 +1240,7 @@ Visitans
 .visit h5 {
   font-size: 8rem;
   font-weight: 300;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
 }
 
 .visit .card {
@@ -1325,12 +1287,12 @@ Carta
 .menu h5 {
   font-size: 8rem;
   font-weight: 300;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
 }
 
 .menu__heading {
   font-size: 4rem;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
   font-weight: 300;
 }
 
@@ -1413,7 +1375,7 @@ Gallery
 .gallery h5 {
   font-size: 8rem;
   font-weight: 300;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
 }
 
 .gallery_grid {
@@ -1562,7 +1524,7 @@ Chefs Block
   font-size: 4.5rem;
   font-weight: 200;
   margin-bottom: 1rem;
-  font-family: "PP Playground", cursive;
+  font-family: var(--cursive-font);
 }
 
 .santcugat-logo {

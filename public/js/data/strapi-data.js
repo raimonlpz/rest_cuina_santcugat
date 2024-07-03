@@ -37,8 +37,22 @@ function populateAddressData() {
 function populateHomeData() {
   const data = window.HOME_DATA;
   const url = window.API_URL;
+
   for (let i = 1; i < 14; i++) {
     injectImgSlider(data, url, i);
+  }
+
+  const chefsOverview = document.querySelector(".chefs-overview");
+  if (chefsOverview) {
+    chefsOverview.innerHTML = data.chefs_block.overview;
+  }
+  const chefMurilo = document.querySelector(".murilo p");
+  if (chefMurilo) {
+    chefMurilo.innerHTML = data.chefs_block.murilo;
+  }
+  const chefRaul = document.querySelector(".raul p");
+  if (chefRaul) {
+    chefRaul.innerHTML = data.chefs_block.raul;
   }
 }
 

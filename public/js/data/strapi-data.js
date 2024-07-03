@@ -144,7 +144,7 @@ function populateExperienceData() {
         </p>
          <div class="card">
             <div class="card_fork">
-               <div class="tf-widget-button">
+               <div class="tf-widget-button" style="width: max-content;">
                   <a
                     class="tf-button-link"
                     href="https://widget.thefork.com/es/6339224a-7ba9-4c8e-97f8-1bd453941c7f?lang=es"

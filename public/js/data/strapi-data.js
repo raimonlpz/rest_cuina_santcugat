@@ -38,7 +38,7 @@ function populateHomeData() {
   const data = window.HOME_DATA;
   const url = window.API_URL;
 
-  for (let i = 1; i < 14; i++) {
+  for (let i = 1; i < 6; i++) {
     injectImgSlider(data, url, i);
   }
 

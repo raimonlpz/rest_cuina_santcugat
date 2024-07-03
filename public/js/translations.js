@@ -6,6 +6,17 @@ function fetchLocaleStoredData() {
   return "es";
 }
 
+function translateHome() {
+  const locale = fetchLocaleStoredData();
+  const frameTitle = document.querySelector(".frame__title");
+  if (frameTitle) {
+    frameTitle.innerHTML =
+      locale == "es"
+        ? " Restaurante <br /><span>Cuina</span> de <span>Sant Cugat</span>"
+        : " Restaurant <br /><span>Cuina</span> de <span>Sant Cugat</span>";
+  }
+}
+
 function translateVisit() {
   const locale = fetchLocaleStoredData();
   const header = document.querySelector(".visit h5");
@@ -63,6 +74,15 @@ function translateFooter() {
       locale == "es" ? "Política de Privacidad" : "Política de Privacitat";
     cookies.innerHTML =
       locale == "es" ? "Política de Cookies" : "Política de Galetes";
+  }
+
+  // Logo
+  const logoRest = document.querySelector(".card_logo");
+  if (logoRest) {
+    logoRest.innerHTML =
+      locale == "es"
+        ? "Restaurante <br /><span>Cuina</span> de <span>Sant Cugat</span>"
+        : "Restaurant <br /><span>Cuina</span> de <span>Sant Cugat</span>";
   }
 }
 
@@ -155,6 +175,7 @@ function translateNavMenus() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  translateHome();
   translateNavMenus();
   translateFooter();
   translateExperience();

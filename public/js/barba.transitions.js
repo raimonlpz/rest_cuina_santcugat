@@ -28,6 +28,10 @@ function pageTransition(data) {
 }
 
 function contentAnimation(data) {
+  if (data.trigger.id === "home") {
+    translateHome();
+  }
+
   if (data.trigger.id === "visit") {
     translateVisit();
   }

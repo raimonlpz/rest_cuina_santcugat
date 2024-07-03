@@ -246,7 +246,7 @@ GRID
 .frame__title span {
   font-optical-sizing: auto;
   font-family: var(--cursive-font);
-  font-size: clamp(1.5rem, 12vw, 11rem);
+  font-size: clamp(1.5rem, 15vw, 13rem);
 }
 
 .frame__back {

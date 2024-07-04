@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", function (event) {
+  if (
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  ) {
+    return;
+  }
+
   var cursor = document.querySelector(".custom-cursor");
   var links = document.querySelectorAll("a");
   var initCursor = false;
@@ -32,32 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   };
 
-  window.ontouchmove = function (e) {
-    var mouseX = e.clientX;
-    var mouseY = e.clientY;
-
-    if (!initCursor) {
-      // cursor.style.opacity = 1;
-      TweenLite.to(cursor, 0.3, {
-        opacity: 1,
-      });
-      initCursor = true;
-    }
-
-    TweenLite.to(cursor, 0, {
-      top: mouseY + "px",
-      left: mouseX + "px",
-    });
-  };
-
   window.onmouseout = function (e) {
-    TweenLite.to(cursor, 0.3, {
-      opacity: 0,
-    });
-    initCursor = false;
-  };
-
-  window.ontouchout = function (e) {
     TweenLite.to(cursor, 0.3, {
       opacity: 0,
     });

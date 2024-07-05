@@ -27,10 +27,15 @@ function translateVisit() {
   const contact = document.querySelector("#contact");
   if (telf && contact) {
     telf.innerHTML =
-      (locale == "es" ? "Teléfono" : "Telèfon") + ": 937 60 09 50";
+      '<a href="tel:937932335" taget="_blank">' +
+      (locale == "es" ? "Teléfono" : "Telèfon") +
+      ": 937 93 23 35" +
+      "</a>";
     contact.innerHTML =
+      '<a href="mailto:comunicacion@cuina-santcugat.cat" taget="_blank">' +
       (locale == "es" ? "Contacto" : "Contacte") +
-      ": comunicacion@cuina-santcugat.cat";
+      ": comunicacion@cuina-santcugat.cat" +
+      "</a>";
   }
 }
 

@@ -1497,6 +1497,7 @@ Chefs Block
   height: max-content;
   margin-left: 50%;
   transform: translateX(-50%);
+  margin-top: -150px;
 }
 
 .chefs-overview {

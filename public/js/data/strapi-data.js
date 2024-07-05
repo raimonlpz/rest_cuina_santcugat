@@ -217,11 +217,8 @@ function populateMenuData() {
   shared.forEach((d) => {
     menuContent.innerHTML += `
         <div class="menu__dish">${d.attributes.name}</div>
-        <div style="margin-top: .25rem">${
-          d.attributes.price
-        } € / <span style='font-size: .85rem; color: orange; opacity: .65'> ${
-      d.attributes.allergens ?? "-"
-    }</span></div>
+        <div style="margin-top: .45rem; color: orange; opacity: 0.65">${d.attributes.price} € 
+    </div>
     `;
   });
   // Sea block
@@ -232,12 +229,9 @@ function populateMenuData() {
   `;
   sea.forEach((d) => {
     menuContent.innerHTML += `
-    <div class="menu__dish">${d.attributes.name}</div>
-    <div style="margin-top: .25rem">${
-      d.attributes.price
-    } € / <span style='font-size: .85rem; color: orange; opacity: .65'> ${
-      d.attributes.allergens ?? "-"
-    }</span></div>
+      <div class="menu__dish">${d.attributes.name}</div>
+        <div style="margin-top: .45rem; color: orange; opacity: 0.65">${d.attributes.price} € 
+    </div>
 `;
   });
   // Meat block
@@ -250,12 +244,9 @@ function populateMenuData() {
   `;
   meat.forEach((d) => {
     menuContent.innerHTML += `
-        <div class="menu__dish">${d.attributes.name}</div>
-        <div style="margin-top: .25rem">${
-          d.attributes.price
-        } € / <span style='font-size: .85rem; color: orange; opacity: .65'> ${
-      d.attributes.allergens ?? "-"
-    }</span></div>
+         <div class="menu__dish">${d.attributes.name}</div>
+        <div style="margin-top: .45rem; color: orange; opacity: 0.65">${d.attributes.price} € 
+    </div>
     `;
   });
   // Vegetal block
@@ -277,12 +268,11 @@ function populateMenuData() {
  `;
   dessert.forEach((d) => {
     menuContent.innerHTML += `
-        <div class="menu__dish">${d.attributes.name}</div>
-        <div style="margin-top: .25rem">${
-          d.attributes.price
-        } € / <span style='font-size: .85rem; color: orange; opacity: .65'> ${
-      d.attributes.allergens ?? "-"
-    }</span></div>
+         <div class="menu__dish">${d.attributes.name}</div>
+        <div style="margin-top: .45rem; color: orange; opacity: 0.65">${d.attributes.price} € 
+    </div>
     `;
   });
+
+  document.querySelector(".outro__title").style.display = "none";
 }

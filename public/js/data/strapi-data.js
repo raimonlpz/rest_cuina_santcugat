@@ -97,15 +97,19 @@ function populateExperienceData() {
   const url = window.API_URL;
 
   if (!data) return;
-  const b1 = data.experience_block.filter(
-    (d) => d.id === 1 || d.id === 7 || d.id === 13
-  )[0];
-  const b2 = data.experience_block.filter(
-    (d) => d.id === 2 || d.id === 8 || d.id === 14
-  )[0];
-  const b3 = data.experience_block.filter(
-    (d) => d.id === 3 || d.id === 9 || d.id === 15
-  )[0];
+  const blocks = data.experience_block.reduce((acc, d) => {
+    const groupIndex = (d.id - 1) % 3; // Change the modulo base if groups per 3.
+    if (!acc[groupIndex]) {
+      acc[groupIndex] = [];
+    }
+    acc[groupIndex].push(d);
+    return acc;
+  }, []);
+
+  // Get the first elements from each group
+  const b1 = blocks[0] ? blocks[0][0] : null;
+  const b2 = blocks[1] ? blocks[1][0] : null;
+  const b3 = blocks[2] ? blocks[2][0] : null;
 
   // Block1 Img
   const block1_img = `${url}${data.block1_img.data[0].attributes.url}`.replace(

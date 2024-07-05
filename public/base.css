@@ -247,7 +247,7 @@ GRID
 .frame__title span {
   font-optical-sizing: auto;
   font-family: var(--cursive-font);
-  font-size: clamp(1.5rem, 17vw, 15rem);
+  font-size: clamp(1.5rem, 18vw, 16rem);
 }
 
 .frame__back {
@@ -1569,6 +1569,7 @@ Chefs Block
   right: 0.85rem;
   width: 40px;
   height: 40px;
+  z-index: 100;
 }
 
 .instagram img {

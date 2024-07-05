@@ -148,7 +148,7 @@ ul.transition {
 
 ul.transition li {
   transform: scaleY(0);
-  background: rgba(125, 81, 0, 0.753);
+  background: #b9935ac1;
   width: 100%;
   list-style: none;
 }
@@ -455,6 +455,9 @@ span.frame__demos-item:not(:first-child) {
   padding: 1rem 2rem;
   border-radius: 10px;
   background-color: #00000017;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgba(255, 166, 0, 0.58);
 }
 
 .card_contact {
@@ -564,7 +567,7 @@ span.frame__demos-item:not(:first-child) {
 }
 
 .background span:nth-child(0) {
-  color: #f88819;
+  color: #727272;
   top: 79%;
   left: 1%;
   animation-duration: 134s;
@@ -573,7 +576,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 13.391210484149935vmin currentColor;
 }
 .background span:nth-child(1) {
-  color: #ff6900;
+  color: #43403d;
   top: 54%;
   left: 85%;
   animation-duration: 115s;
@@ -582,7 +585,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 12.561351089953808vmin currentColor;
 }
 .background span:nth-child(2) {
-  color: #d6501b;
+  color: #7d7d7d;
   top: 89%;
   left: 81%;
   animation-duration: 163s;
@@ -591,7 +594,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 12.89698611434263vmin currentColor;
 }
 .background span:nth-child(3) {
-  color: #d6501b;
+  color: #585858;
   top: 7%;
   left: 44%;
   animation-duration: 70s;
@@ -600,7 +603,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 12.524011666473173vmin currentColor;
 }
 .background span:nth-child(4) {
-  color: #d6501b;
+  color: #827671;
   top: 59%;
   left: 23%;
   animation-duration: 57s;
@@ -609,7 +612,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 13.373134561017281vmin currentColor;
 }
 .background span:nth-child(5) {
-  color: #d6501b;
+  color: #6f6f6f;
   top: 50%;
   left: 98%;
   animation-duration: 159s;
@@ -618,7 +621,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 13.011606591633136vmin currentColor;
 }
 .background span:nth-child(6) {
-  color: #f88819;
+  color: #a39d97;
   top: 78%;
   left: 32%;
   animation-duration: 135s;
@@ -627,7 +630,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 12.726436159179842vmin currentColor;
 }
 .background span:nth-child(7) {
-  color: #ff6900;
+  color: #535353;
   top: 16%;
   left: 50%;
   animation-duration: 72s;
@@ -636,7 +639,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 13.193308221342747vmin currentColor;
 }
 .background span:nth-child(8) {
-  color: #d6501b;
+  color: #6d6460;
   top: 77%;
   left: 18%;
   animation-duration: 163s;
@@ -645,7 +648,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 12.658957841199712vmin currentColor;
 }
 .background span:nth-child(9) {
-  color: #f88819;
+  color: #636363;
   top: 38%;
   left: 34%;
   animation-duration: 35s;
@@ -654,7 +657,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 12.594848222607979vmin currentColor;
 }
 .background span:nth-child(10) {
-  color: #ff6900;
+  color: #828282;
   top: 73%;
   left: 38%;
   animation-duration: 16s;
@@ -663,7 +666,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 13.118758047839993vmin currentColor;
 }
 .background span:nth-child(11) {
-  color: #f88819;
+  color: #7d7b79;
   top: 61%;
   left: 35%;
   animation-duration: 9s;
@@ -672,7 +675,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 13.46808141518106vmin currentColor;
 }
 .background span:nth-child(12) {
-  color: #f88819;
+  color: #7c756e;
   top: 24%;
   left: 99%;
   animation-duration: 108s;
@@ -681,7 +684,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 12.72661010377216vmin currentColor;
 }
 .background span:nth-child(13) {
-  color: #ff6900;
+  color: #808080;
   top: 39%;
   left: 85%;
   animation-duration: 95s;
@@ -690,7 +693,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 12.732750611525894vmin currentColor;
 }
 .background span:nth-child(14) {
-  color: #d6501b;
+  color: #4a4a4a;
   top: 79%;
   left: 65%;
   animation-duration: 131s;
@@ -699,7 +702,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 13.050879416275539vmin currentColor;
 }
 .background span:nth-child(15) {
-  color: #ff6900;
+  color: #606060;
   top: 2%;
   left: 49%;
   animation-duration: 86s;
@@ -708,7 +711,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 12.579140103719338vmin currentColor;
 }
 .background span:nth-child(16) {
-  color: #d6501b;
+  color: #797270;
   top: 97%;
   left: 95%;
   animation-duration: 31s;
@@ -717,7 +720,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: -100vmin 0 12.757245422585768vmin currentColor;
 }
 .background span:nth-child(17) {
-  color: #ff6900;
+  color: #6e6e6e;
   top: 93%;
   left: 27%;
   animation-duration: 13s;
@@ -726,7 +729,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 13.13984331590448vmin currentColor;
 }
 .background span:nth-child(18) {
-  color: #ff6900;
+  color: #5a5a5a;
   top: 8%;
   left: 10%;
   animation-duration: 41s;
@@ -735,7 +738,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 12.609710534565675vmin currentColor;
 }
 .background span:nth-child(19) {
-  color: #f88819;
+  color: #848281;
   top: 70%;
   left: 77%;
   animation-duration: 154s;
@@ -744,7 +747,7 @@ span.frame__demos-item:not(:first-child) {
   box-shadow: 100vmin 0 12.886560758506018vmin currentColor;
 }
 .background span:nth-child(20) {
-  color: #ff6900;
+  color: #797979;
   top: 78%;
   left: 93%;
   animation-duration: 119s;

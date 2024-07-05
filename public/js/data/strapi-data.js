@@ -164,7 +164,7 @@ function populateExperienceData() {
                     href="https://widget.thefork.com/es/6339224a-7ba9-4c8e-97f8-1bd453941c7f?lang=es"
                     target="_blank"
                     rel="noopener"
-                    >RESERVA a The Fork</a
+                    >RESERVA</a
                   >
               </div>
             </div>

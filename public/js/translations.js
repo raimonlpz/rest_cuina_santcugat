@@ -12,8 +12,8 @@ function translateHome() {
   if (frameTitle) {
     frameTitle.innerHTML =
       locale == "es"
-        ? " Restaurante <br /><span>Cuina</span> de <span>Sant Cugat</span>"
-        : " Restaurant <br /><span>Cuina</span> de <span>Sant Cugat</span>";
+        ? "Cuina <br/> <span>Sant Cugat</span>"
+        : "Cuina <br/> <span>Sant Cugat</span>";
   }
 }
 
@@ -81,8 +81,14 @@ function translateFooter() {
   if (logoRest) {
     logoRest.innerHTML =
       locale == "es"
-        ? "Restaurante <br /><span>Cuina</span> de <span>Sant Cugat</span>"
-        : "Restaurant <br /><span>Cuina</span> de <span>Sant Cugat</span>";
+        ? `
+          Cuina <br />
+          <span>Sant Cugat</span>
+        `
+        : `
+            Cuina <br />
+            <span>Sant Cugat</span>
+        `;
   }
 }
 

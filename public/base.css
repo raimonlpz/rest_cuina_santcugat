@@ -242,12 +242,15 @@ GRID
   font-weight: 300;
   max-width: 80vw;
   line-height: 1.2;
+  font-family: "Inconsolata", monospace;
 }
 
 .frame__title span {
   font-optical-sizing: auto;
-  font-family: var(--cursive-font);
-  font-size: clamp(1.5rem, 18vw, 16rem);
+  font-style: italic;
+  font-weight: 600;
+  /* font-family: var(--cursive-font); */
+  font-size: clamp(1.5rem, 16vw, 14rem);
 }
 
 .frame__back {

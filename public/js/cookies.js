@@ -36,7 +36,7 @@ CookieConsent.run({
           title: "¡Es hora de las Cookies!",
           description:
             'Nuestro sitio web utiliza cookies de seguimiento para comprender cómo interactúa con él. El seguimiento se habilitará sólo si acepta explícitamente. <a href="#" data-cc="show-preferencesModal" class="cc__link">Manejar preferencias</a>',
-          acceptAllBtn: "Acceptar todo",
+          acceptAllBtn: "Aceptar todo",
           acceptNecessaryBtn: "Rechazar todo",
           showPreferencesBtn: "Manejar preferencias",
           //closeIconLabel: 'Close',

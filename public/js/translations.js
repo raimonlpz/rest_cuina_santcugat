@@ -529,7 +529,7 @@ function translateExperience() {
   }
   const menuCta = document.querySelector(".card_fork #menu");
   if (menuCta) {
-    menuCta.innerHTML = locale == "es" ? "MENÚ Completo" : "MENÚ Complet";
+    menuCta.innerHTML = locale == "es" ? "Menú completo" : "Menú complet";
   }
 }
 

@@ -239,10 +239,14 @@ GRID
   grid-area: title;
   font-size: clamp(1.5rem, 14vw, 11rem);
   margin: 0;
-  font-weight: 300;
+  font-weight: 200;
   max-width: 80vw;
   line-height: 1.2;
   font-family: "Inconsolata", monospace;
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
 }
 
 .frame__title span {

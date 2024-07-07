@@ -40,6 +40,18 @@ function contentAnimation(data) {
     translateExperience();
   }
 
+  if (data.trigger.id === "legal") {
+    translateAvisoLegal();
+  }
+
+  if (data.trigger.id === "privacity") {
+    translatePrivacity();
+  }
+
+  if (data.trigger.id === "cookies") {
+    translateCookies();
+  }
+
   if (data.trigger.id === "menu") {
     document.querySelector(".outro__title").style.display = "none";
   }

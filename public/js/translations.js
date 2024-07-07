@@ -9,12 +9,12 @@ function fetchLocaleStoredData() {
 function translateHome() {
   const locale = fetchLocaleStoredData();
   const frameTitle = document.querySelector(".frame__title");
-  if (frameTitle) {
-    frameTitle.innerHTML =
-      locale == "es"
-        ? "Cuina <br/> <span>Sant Cugat</span>"
-        : "Cuina <br/> <span>Sant Cugat</span>";
-  }
+  // if (frameTitle) {
+  //   frameTitle.innerHTML =
+  //     locale == "es"
+  //       ? "Cuina <br/> <span>Sant Cugat</span>"
+  //       : "Cuina <br/> <span>Sant Cugat</span>";
+  // }
 }
 
 function translateCookies() {
@@ -163,7 +163,7 @@ function translatePrivacity() {
       <h5>Política de Privacidad</h5>
           <div class="politica-privacidad__content">
             <p>
-              En Cuina Sant Pau, valoramos y respetamos tu privacidad. Esta
+              En Cuina Sant Cugat, valoramos y respetamos tu privacidad. Esta
               Política de Privacidad describe cómo recopilamos, utilizamos y
               protegemos la información personal que nos proporcionas a través
               de nuestro sitio web https://www.cuina-santcugat.com/ (en
@@ -279,7 +279,7 @@ function translatePrivacity() {
     <h5>Política de Privacitat</h5>
 <div class="politica-privacidad__content">
   <p>
-    A Cuina Sant Pau, valorem i respectem la teva privacitat. Aquesta
+    A Cuina Sant Cugat, valorem i respectem la teva privacitat. Aquesta
     Política de Privacitat descriu com recopilem, utilitzem i
     protegim la informació personal que ens proporciones a través
     del nostre lloc web https://www.cuina-santcugat.com/ (d'ara endavant, el "web").
@@ -525,7 +525,7 @@ function translateExperience() {
   }
   const headline = document.querySelector("#headline-food");
   if (headline) {
-    headline.innerHTML = locale == "es" ? "La Cocina" : "La Cuina";
+    headline.innerHTML = locale == "es" ? "La cocina" : "La cuina";
   }
   const menuCta = document.querySelector(".card_fork #menu");
   if (menuCta) {

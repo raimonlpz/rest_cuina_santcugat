@@ -241,20 +241,21 @@ GRID
   font-size: clamp(1.5rem, 16vw, 13rem);
   margin: 0;
   font-weight: 200;
-  max-width: 80vw;
+  /* max-width: 80vw; */
+  width: 80vw;
   line-height: 1.2;
   font-family: "Inconsolata", monospace;
   text-align: center;
   margin-left: 50%;
   transform: translateX(-50%);
-  width: max-content;
+  width: 60vw;
 }
 
 .frame__title span {
   font-optical-sizing: auto;
   font-weight: 200;
   /* font-family: var(--cursive-font); */
-  font-size: clamp(1.5rem, 16vw, 14rem);
+  /* font-size: clamp(1.5rem, 16vw, 14rem); */
 }
 
 .frame__back {
@@ -1670,4 +1671,49 @@ Aviso Legal
   font-family: var(--cursive-font);
   align-self: center;
   justify-content: center;
+}
+
+svg {
+  font-family: "Inconsolata" monospace;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+svg text {
+  text-transform: uppercase;
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #ffffff;
+  font-size: 290px;
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgb(172, 172, 172);
+  }
+  80% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgb(229, 229, 229);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgb(190, 190, 190);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  svg text {
+    font-size: 350px;
+  }
 }

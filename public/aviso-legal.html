@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cuina de Sant Cugat - Carta</title>
+    <title>Cuina de Sant Cugat - Inici</title>
     <meta name="title" content="Cuina de Sant Cugat" />
     <meta
       name="description"
@@ -98,8 +98,11 @@
           "Please view this demo in a modern browser that supports CSS Variables."
         );
     </script>
+    <link
+      href=" https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.0.1/dist/cookieconsent.min.css "
+      rel="stylesheet"
+    />
   </head>
-
   <body class="demo-1 loading">
     <div class="background">
       <span></span>
@@ -147,7 +150,7 @@
         <a class="frame__prev" href="./experience" id="experience"
           >Experiència</a
         >
-        <a class="frame__back" href="./visit" id="visit">Visita'ns</a>
+        <a class="frame__prev" href="./visit" id="visit">Visita'ns</a>
         <a class="frame__prev" href="./menu" id="menu">La Carta</a>
         <a class="frame__prev" href="./gallery" id="gallery">Galeria</a>
       </div>
@@ -204,9 +207,63 @@
 
     <main data-barba="wrapper">
       <div data-barba="container">
-        <div class="menu">
-          <h5>La Carta</h5>
-          <div class="menu_content"></div>
+        <div class="aviso-legal">
+          <h5>Aviso Legal</h5>
+          <div class="aviso-legal__content">
+            <p>
+              En cumplimiento con el deber de información establecido en la Ley
+              34/2002, de Servicios de la Sociedad de la Información y del
+              Comercio Electrónico (LSSICE), a continuación, se indican los
+              datos de información general de este sitio web:
+            </p>
+            <ul>
+              <li>Titular: Cuina Sant Cugat S.C.P</li>
+              <li>Domicilio social: Calle Sant Bonaventura, 6, Sant Cugat</li>
+              <li>Contacto: comunicacion@cuina-santcugat.cat</li>
+              <li>Teléfono: 937 93 23 35</li>
+            </ul>
+            <h5>Propiedad intelectual e industrial</h5>
+            <p>
+              Todos los derechos de propiedad intelectual e industrial del sitio
+              web y de los elementos contenidos en el mismo, incluyendo, pero no
+              limitándose a, marcas, logotipos, nombres comerciales, textos,
+              imágenes, gráficos, diseños, sonidos, bases de datos, código
+              fuente, estructura de navegación, y demás elementos susceptibles
+              de protección, son propiedad del titular del sitio web o de
+              terceros que han autorizado su uso. El acceso al sitio web no
+              implica cesión de dichos derechos. Queda prohibida cualquier
+              reproducción, distribución, comunicación pública, transformación o
+              cualquier otra forma de explotación, total o parcial, de los
+              contenidos del sitio web, salvo autorización expresa del titular
+              del sitio web.
+            </p>
+            <h5>Responsabilidad</h5>
+            <p>
+              El titular del sitio web no se hace responsable del uso indebido
+              que se realice de los contenidos del sitio web, siendo exclusiva
+              responsabilidad de la persona que accede a ellos o los utiliza.
+            </p>
+            <h5>Links</h5>
+            <p>
+              El sitio web puede incluir enlaces a otros sitios web que no son
+              propiedad del titular de este. No nos hacemos responsables de la
+              disponibilidad ni de los contenidos de dichos sitios web, ni de
+              cualquier daño o pérdida que pueda surgir por el uso de los
+              mismos.
+            </p>
+            <h5>Legislación aplicable y jurisdicción</h5>
+            <p>
+              Este aviso legal se rige por la legislación española. En caso de
+              disputa o controversia relacionada con el sitio web, las partes se
+              someten a la jurisdicción de los tribunales español.
+            </p>
+            <h5>Actualización del aviso legal</h5>
+            <p>
+              El titular del sitio web se reserva el derecho a modificar este
+              aviso legal en cualquier momento y sin previo aviso, por lo que se
+              recomienda su revisión periódica.
+            </p>
+          </div>
         </div>
       </div>
     </main>
@@ -295,5 +352,7 @@
     <script src="js/barba.transitions.js"></script>
     <script src="js/strapi.js"></script>
     <script src="js/translations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.0.1/dist/cookieconsent.umd.min.js "></script>
+    <script src="js/cookies.js"></script>
   </body>
 </html>

@@ -18,7 +18,8 @@
   --color-year: #b9b3af;
   --img-ratio: 1.5;
   --s: 1;
-  --cursive-font: "Pinyon Script", cursive;
+  /* --cursive-font: "Pinyon Script", cursive; */
+  --cursive-font: "Inconsolata", monospace;
   overflow-x: hidden;
 }
 
@@ -387,6 +388,7 @@ span.frame__demos-item:not(:first-child) {
 .outro__title {
   font-weight: 300;
   font-size: clamp(1.5rem, 10vw, 2rem);
+  display: none;
 }
 
 .card-wrap {

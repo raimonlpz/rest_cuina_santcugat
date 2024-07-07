@@ -42,9 +42,10 @@ function contentAnimation(data) {
 
   if (data.trigger.id === "menu") {
     document.querySelector(".outro__title").style.display = "none";
-  } else {
-    document.querySelector(".outro__title").style.display = "block";
   }
+  // else {
+  //   document.querySelector(".outro__title").style.display = "block";
+  // }
 
   window.scrollTo({ top: 0, duration: 2 });
 

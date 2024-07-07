@@ -1281,6 +1281,13 @@ Visitans
 }
 
 @media only screen and (min-width: 768px) {
+  .visit h5,
+  .menu h5,
+  .experience h5,
+  .gallery h5 {
+    font-size: 5rem;
+  }
+
   .visit_content {
     flex-direction: row;
   }

@@ -1616,6 +1616,8 @@ Aviso Legal
 
 .aviso-legal__content ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .aviso-legal__content ul li {
@@ -1634,6 +1636,10 @@ Aviso Legal
   .experience h5,
   .visit h5 {
     font-size: 5rem;
+  }
+
+  .aviso-legal__content {
+    width: 90%;
   }
 }
 

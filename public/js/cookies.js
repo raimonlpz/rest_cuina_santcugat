@@ -41,7 +41,7 @@ CookieConsent.run({
           showPreferencesBtn: "Manejar preferencias",
           //closeIconLabel: 'Close',
           footer: `
-            <a href="#">Política de privacidad</a>
+            <a href="./politica-de-privacidad">Política de privacidad</a>
             `,
         },
         preferencesModal: {
@@ -54,7 +54,7 @@ CookieConsent.run({
             {
               title: "Uso de las Cookies",
               description:
-                'Utilizamos cookies para garantizar las funcionalidades básicas del sitio web y mejorar su experiencia en línea. Puede elegir por cada categoría si acepta o no. Para obtener más detalles relacionados con las cookies y otros datos confidenciales, lea el artículo completo. <a href="#" class="cc__link">Política de privacidad</a>.',
+                'Utilizamos cookies para garantizar las funcionalidades básicas del sitio web y mejorar su experiencia en línea. Puede elegir por cada categoría si acepta o no. Para obtener más detalles relacionados con las cookies y otros datos confidenciales, lea el artículo completo. <a href="./politica-de-privacidad" class="cc__link">Política de privacidad</a>.',
             },
             {
               title: "Cookies estrictamente necesarias",

@@ -237,7 +237,7 @@ GRID
 
 .frame__title {
   grid-area: title;
-  font-size: clamp(1.5rem, 14vw, 11rem);
+  font-size: clamp(1.5rem, 16vw, 13rem);
   margin: 0;
   font-weight: 200;
   max-width: 80vw;

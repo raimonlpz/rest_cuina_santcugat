@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function (event) {
+  initCursor();
+});
+
+window.addEventListener("resize", () => {
+  initCursor();
+});
+
+function initCursor() {
   if (
     navigator.userAgent.match(/Android/i) ||
     navigator.userAgent.match(/webOS/i) ||
@@ -51,4 +59,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
     initCursor = false;
   };
-});
+}

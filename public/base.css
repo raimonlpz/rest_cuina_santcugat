@@ -66,6 +66,16 @@ body {
   transform: translate(-50%, -50%) scale(1);
 }
 
+@media only screen and (max-width: 468px) {
+  .custom-cursor {
+    display: none;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+}
+
 /* Page Loader */
 .js .loading::before,
 .js .loading::after {

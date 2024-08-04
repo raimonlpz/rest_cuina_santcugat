@@ -99,3 +99,9 @@ preloadImages(".grid__item-img-inner").then(() => {
   // Initialize grid
   const grid = new Grid(document.querySelector(".gallery_grid"));
 });
+
+const el = document.querySelector("#hamburger");
+el.addEventListener("click", (e) => {
+  const dr = document.querySelector("#drawer-input");
+  dr.checked = !dr.checked;
+});

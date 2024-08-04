@@ -85,6 +85,15 @@ function contentAnimation(data) {
       populateGalleryData();
     }
 
+    const forks = document.querySelectorAll(".tf-button-link");
+    forks.forEach((fork) => {
+      fork.addEventListener("click", (e) => {
+        e.preventDefault();
+        const url = fork.getAttribute("href");
+        window.open(url, "_blank");
+      });
+    });
+
     if (data.trigger.id == "home") {
       populateHomeData();
       let gridItems = document.querySelectorAll(".grid__item");

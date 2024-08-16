@@ -100,11 +100,11 @@ preloadImages(".grid__item-img-inner").then(() => {
   const grid = new Grid(document.querySelector(".gallery_grid"));
 });
 
-const el = document.querySelector("#hamburger .drawer-open");
-el.addEventListener("click", (e) => {
-  const dr = document.querySelector("#drawer-input");
-  dr.checked = !dr.checked;
-});
+// const el = document.querySelector("#hamburger .drawer-open");
+// el.addEventListener("click", (e) => {
+// const dr = document.querySelector("#drawer-input");
+// dr.checked = !dr.checked;
+// });
 
 const insta = document.querySelector(".instagram a");
 insta.addEventListener("click", (e) => {
